@@ -1,7 +1,10 @@
 import "./App.css";
+import Layout from "./components/layout/layout";
 
 function App() {
-  return <h1>hello world</h1>;
+  return (
+    <Layout/>
+  );
 }
 
 export default App;
