@@ -9,11 +9,10 @@ const Services = () => {
         <section className='services'>
             <Container>
                 <Row>
-
                     {
                         serviceData.map((item, index) => (
                             <Col lg='3' md='4' key={index}>
-                                <motion.div whileHover={{scale:1.1}} className="service__item" style={{background:`${item.bg}`}}>
+                                <motion.div whileHover={{ scale: 1.1 }} className="service__item" style={{ background: `${item.bg}` }}>
                                     <span><i className={item.icon}></i>
                                     </span>
                                     <div>
@@ -24,8 +23,6 @@ const Services = () => {
                             </Col>
                         ))
                     }
-
-
                 </Row>
             </Container>
         </section>

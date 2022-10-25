@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import Helmet from '../components/helmet/helmet'
 import heroImg from '../assets/images/hero-img.png'
@@ -6,10 +6,20 @@ import "../styles/home.css"
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Services from '../services/services'
-
+import ProductList from '../components/UI/productList'
+import  products from '../assets/data/products'
 const Home = () => {
 
+  const [data, setdata] = useState(products)
+
   const year = new Date().getFullYear()
+
+  useEffect(() => {
+      const filteredProducts = products.filter((item)=>item.category === 'chair')
+
+      setdata(filteredProducts)
+  }, [])
+  
 
   return (
     <Helmet title={"Home"}>
@@ -36,6 +46,17 @@ const Home = () => {
       </section>
 
       <Services/>
+
+      <section className='trending__products'>
+          <Container>
+            <Row>
+              <Col lg="12" className='text-center'>
+                <h2 className='section__title'>Trending Products</h2>
+              </Col>
+              <ProductList data={data}/>
+            </Row>
+          </Container>
+      </section>
     </Helmet>
   )
 }
