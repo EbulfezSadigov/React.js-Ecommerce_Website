@@ -9,16 +9,16 @@ import { motion } from 'framer-motion';
 
 const nav__link = [
   {
-    path:'home',
-    display:'Home'
+    path: 'home',
+    display: 'Home'
   },
   {
-    path:'shop',
-    display:'Shop'
+    path: 'shop',
+    display: 'Shop'
   },
   {
-    path:'cart',
-    display:'Cart'
+    path: 'cart',
+    display: 'Cart'
   }
 ]
 
@@ -36,13 +36,13 @@ const Header = () => {
             </div>
             <div className="navigation">
               <ul className='menu'>
-                  {
-                    nav__link.map((item,index)=>(
-                      <li className='nav__item' key={index}>
-                          <NavLink to={item.path} className={(navclass)=>navclass.isActive ? 'nav__active' : ''}>{item.display}</NavLink>
-                      </li>
-                    ))
-                  }
+                {
+                  nav__link.map((item, index) => (
+                    <li className='nav__item' key={index}>
+                      <NavLink to={item.path} className={(navclass) => navclass.isActive ? 'nav__active' : ''}>{item.display}</NavLink>
+                    </li>
+                  ))
+                }
               </ul>
             </div>
             <div className="nav__icons">
@@ -55,7 +55,7 @@ const Header = () => {
                 <span className='badge'>1</span>
               </span>
               <span>
-                <motion.img whileTap={{scale:1.2}} src={user_icon} alt="" />
+                <motion.img whileTap={{ scale: 1.2 }} src={user_icon} alt="" />
               </span>
             </div>
             <div className="mobile__menu">
