@@ -27,3 +27,32 @@
     margin-top: 5px;
     color: #222;
 }
+
+@media only screen and (max-width:992px){
+    .service__item{
+        padding: 10px;
+        margin-bottom: 1.5rem;
+    }
+
+    .service__item span i{
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+
+    .service__item h3{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .service__item span i{
+        font-size: 1.5rem;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width:576px){
+    .service__item{
+        padding: 20px;
+    }
+}
